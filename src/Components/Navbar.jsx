@@ -1,13 +1,34 @@
-import './Navbar.css';
-export const Navbar = () => {
+
+export const Navbar = ({navStatus, setStatus}) => {
   return (
-    <nav className="bg-gray-800 p-4">
-      <ul className="flex space-x-6 justify-center">
-        <li className="text-white hover:text-gray-300 cursor-pointer font-semibold">Home</li>
-        <li className="text-white hover:text-gray-300 cursor-pointer font-semibold">About</li>
-        <li className="text-white hover:text-gray-300 cursor-pointer font-semibold">Services</li>
-        <li className="text-white hover:text-gray-300 cursor-pointer font-semibold">Contact</li>
-      </ul>
+<nav className="sticky top-0  bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="text-2xl font-bold font-sans"> S h u l l i.exe </div>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex gap-6">
+            <a href="#" className=" px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500">About Me</a>
+            <a href="#" className=" px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500">Projects</a>
+            <a href="#" className=" px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500">Contact Me</a>
+          </div>
+
+          {/* Mobile Button */}
+          <button
+            onClick={() => setStatus(!navStatus)}
+            className="md:hidden text-2xl"
+          >
+            ☰
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div className={`${navStatus ? "block" : "hidden"} md:hidden bg-slate-800 px-4 pb-4 text-center`}>
+        <a href="#" className="block py-2 hover:bg-fuchsia-950">About Me</a>
+        <a href="#" className="block py-2 hover:bg-fuchsia-950">Projects</a>
+        <a href="#" className="block py-2 hover:bg-fuchsia-950">Contact Me</a>
+      </div>
     </nav>
-  )
+  );
 };
