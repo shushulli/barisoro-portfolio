@@ -5,7 +5,8 @@ import {Navbar} from './Components/Navbar.jsx'
 import { Footer } from './Components/Footer.jsx';
 import { LightDarkBtn } from './Components/LightDarkBtn.jsx';
 import { AboutMe } from './pages/AboutMe.jsx';
-import { Projects } from './pages/Projects.jsx';
+import { ProjectSection } from './pages/ProjectSection.jsx';
+import { Projects} from './pages/Projects.jsx';
 
 
 function App() {
@@ -16,10 +17,13 @@ function App() {
   return (
     <>
     <Navbar navStatus={status} setStatus={setStatus} /> {/* Passing props to Navbar */}
+    <main> 
     <LandingPage navStatus={status} setStatus={setStatus} />
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
     <AboutMe activeTab={activeTab} setActiveTab={setActiveTab} />
-    <Projects />
+    <ProjectSection />
+    <Projects/>
+    </main>
     <Footer />
     </>
   )
