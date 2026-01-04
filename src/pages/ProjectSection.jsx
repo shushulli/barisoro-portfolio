@@ -4,7 +4,7 @@ export const ProjectSection = () => {
     return ( 
 <> 
 
-<main className="bg-pink-500 min-h-screen"> {/* Entire Projects section*/}
+<main className="min-h-screen"> {/* Entire Projects section*/}
 <div className='mx-auto pb-10'> {/* Container */}
 {/*Hero section, that also serves as wrapper. No container because i want this section to take up full width*/}
 <section className='relative h-70 bg-fuchsia-400 flex flex-col justify-center items-center '> 
@@ -22,7 +22,7 @@ export const ProjectSection = () => {
 </section>
 
 {/*Actual projects section that is also a wrapper and also no container*/}
-<section className=' relative -mt-10 r-50 bg-white max-w-5xl mx-auto rounded-lg  shadow-md border-t-2 border-fuchsia-900'>
+<section className=' relative -mt-10 r-50 bg-white max-w-5xl mx-auto rounded-lg  shadow-md border-t-2 '>
 <div className = "grid grid-cols-1 md:grid-cols-3 gap-8  p-5" >
     {/* Project cards*/ } 
     <ProjectCard title = "Food Bank" description="A project to help food banks manage inventory and distribute resources efficiently." />

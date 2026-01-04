@@ -2,14 +2,19 @@ import sparkle from "../assets/images/sparkle.avif";
 import pfp from "../assets/images/pfp.png"
 import { Btn1 } from "../Components/Btn1";
 import { HireMeBtn } from "../Components/HireMeButton";
-
+import { useNavigate } from "react-router-dom";
 
 
 export const LandingPage = () => {
+   const navigate = useNavigate();
+
+  const enterSite = () => {
+    navigate("/aboutme"); // redirect to main page
+  };
   return (
     <>
       {/* Entire Landing Page */}
-      <main className="relative min-h-screen bg-linear-to-b from-pink-500 to-indigo-800 via-fuchsia-800 text-white flex flex-col justify-center">
+      <main className="relative min-h-screen bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white flex flex-col justify-center">
         {/* Background Image */}
         <img
           src={sparkle}
@@ -29,7 +34,7 @@ export const LandingPage = () => {
                 className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md"
               />
               <Btn1/>
-              <HireMeBtn/>
+              <HireMeBtn action = {enterSite}/>
 
               
             </section>
