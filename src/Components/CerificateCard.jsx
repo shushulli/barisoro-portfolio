@@ -1,6 +1,6 @@
 
 
-      export const CertificateCard = ({certDict, key}) => { 
+      export const CertificateCard = ({certDict}) => { 
 
 
 <figure

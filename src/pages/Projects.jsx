@@ -27,7 +27,7 @@ export const Projects = () => {
 
 
         
-    <div className="relative min-h-screen">
+    <main className="relative min-h-screen">
       {/* Container */}
       <div className="max-w-7xl mx-auto ">
         <div className="flex flex-col gap-y-15 ">
@@ -46,7 +46,7 @@ export const Projects = () => {
         {/* Main Content */}
         <div className="mt-4 flex flex-col md:flex-row gap-6 p-6 max-w-3xl border-2 mx-auto">
 
-          <main className="flex-1 p-6 rounded  text-white bg-slate-800">
+          <section className="flex-1 p-6 rounded  text-white bg-slate-800" id = "benefeed">
             <h1 className="text-4xl font-bold mb-4">BENEFEED</h1>
             <p className="font-light text-sm mb-6">
               Benefeed is a simple, python-based program that makes use of data structures to create a food bank management system which helps food banks efficiently manage their food inventory and beneficiary profiles. This program tracks various food items, monitors expiration dates using a min-heap data structure, and supports matching donated food with beneficiaries' dietary needs to reduce food waste and improve distribution effectiveness.
@@ -128,10 +128,10 @@ export const Projects = () => {
               ))}
             </div>
 
-          </main>
+          </section>
         </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };

@@ -1,4 +1,5 @@
 import { ProjectCard } from '../Components/ProjectCard';
+import { useNavigate } from 'react-router-dom';
 import benefeed from '../assets/images/benefeed.png'
 import funesfbf from '../assets/images/funesfbf.png'
 // Project section (featured projects)
@@ -8,7 +9,9 @@ import funesfbf from '../assets/images/funesfbf.png'
   { title: "Funes/Fbf", description: "Flood Risk Level Forecasting System", tags: ["Python"], cover:funesfbf, },
 ];
 
+
 export const ProjectSection = () => {
+  const navigate = useNavigate();
     return ( 
 <> 
 {/* className='bg-black' */}
@@ -38,6 +41,7 @@ export const ProjectSection = () => {
                 description={project.description}
                 tags={[project.tags]}
                 cover = {project.cover}
+                onClick = {() => navigate("/projects#benefeed")}
               />
             ))
 

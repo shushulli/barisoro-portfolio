@@ -1,8 +1,9 @@
-export const ProjectCard = ({ title, description, tags, cover}) => {
+export const ProjectCard = ({ title, description, tags, cover, onClick}) => {
     return ( 
+      
 <> 
 
-    <div className='bg-pink-300 rounded-md overflow-hidden shadow-md flex flex-col border-2 border-amber-300 border-t-0  mx-auto w-full *:hover:bg-fuchsia-300 *:transition-colors *:duration-150 *:ease-in '> 
+    <div className='bg-pink-300 rounded-md overflow-hidden shadow-md flex flex-col border-2 border-amber-300 border-t-0  mx-auto w-full *:hover:bg-fuchsia-300 *:transition-colors *:duration-150 *:ease-in ' onClick={onClick}> 
          <div className="relative h-40 w-full bg-fuchsia-200">
 <img src = {cover} className="object-cover h-full w-full"/>
           </div>
