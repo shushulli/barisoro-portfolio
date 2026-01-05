@@ -1,7 +1,7 @@
 import sparkle from "../assets/images/sparkle.avif";
 import pfp from "../assets/images/pfp.png"
 import { Btn1 } from "../Components/Btn1";
-import { HireMeBtn } from "../Components/HireMeButton";
+import { LearnAboutMeBtn } from "../Components/LearnAboutMeBtn.jsx";
 import { useNavigate } from "react-router-dom";
 
 
@@ -34,7 +34,7 @@ export const LandingPage = () => {
                 className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md"
               />
               <Btn1/>
-              <HireMeBtn action = {enterSite}/>
+              <LearnAboutMeBtn action = {enterSite}/>
 
               
             </section>

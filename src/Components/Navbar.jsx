@@ -1,14 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import pfp from '../assets/images/pfp.png'
 
 export const Navbar = ({ navStatus, setStatus }) => {
+  const navigate = useNavigate();
+
+  const enterSite = () => {
+    navigate("/"); // redirect to main page
+  };
   return (
     <nav className="sticky top-0 bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50 overflow-hidden rounded-xl mx-2">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold font-sans">
-            <p>Shulli.exe</p>
-            
-            
+          <div className="flex gap-x-3 jusify-center items-center">
+
+            <img src={pfp} className="size-10 rounded-full hover:animate-spin"onClick={enterSite}>
+            </img>
+            <p className="text-2xl font-bold font-sans">Shulli.exe</p>
+
             </div>
 
           {/* Desktop Menu */}

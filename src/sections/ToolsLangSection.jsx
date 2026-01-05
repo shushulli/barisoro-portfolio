@@ -5,13 +5,13 @@ export const ToolsLangSection = () => {
 <> 
 
 
-<section className="bg-black">
+<section>
         <div className="max-6xl mx-auto shadow-2xl shadow-pink-100">
             {/* Grid with 12 cols, gap of 6 */}
-          <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-6 border-2">
+          <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-6 ">
             
             {/* TOOLS & LANGUAGES CELL */}
-            <div className="col-span-7 bg-amber-50 p-6 rounded-lg shadow-md min-h-65 md:min-h-65 lg:min-h-65 border-2 border-e-amber-600">
+            <div className="md:col-span-7 bg-fuchsia-100 p-6 rounded-lg shadow-md min-h-65 md:min-h-65 lg:min-h-65 order-2 md:order-1">
               <h1 className="text-lg font-bold mb-4">
               sdsd
               </h1>
@@ -30,7 +30,7 @@ export const ToolsLangSection = () => {
             </div>
 
             {/* LABEL */}
-            <div className="col-span-5 flex items-center justify-center border-2">
+            <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2  sm:flex-col">
               <h1 className="text-6xl font-semibold -tracking-widest text-white">
                 TOOLS AND LANGUAGES
               </h1>

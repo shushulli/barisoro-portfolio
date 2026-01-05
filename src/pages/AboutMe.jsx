@@ -11,9 +11,9 @@ export const AboutMe = ({ activeTab, setActiveTab }) => {
 // Main - entire about me page
     <main className="relative min-h-screen">
       {/* Container - for padding and width */}
-      <div className="p-5 max-w-6xl mx-auto">
+      <div className="p-5 max-w-7xl mx-auto">
         {/* Flex wrapper - all the sections act as column and vertically stacked. */}
-        <div className="flex flex-col gap-y-5 border-2 ">
+        <div className="flex flex-col gap-y-25  ">
           {/*=== ABOUT ME SECTION === */}
           {/* activeTab and setActiveTab is passed  to AboutMeSection */}
           <AboutMeSection
