@@ -3,7 +3,7 @@ import carousel1 from '../assets/images/ashley.png';
 import carousel2 from '../assets/images/foodbank.jpg';
 import carousel3 from '../assets/images/sparkle.avif';
 import { useState } from 'react';
-import { Carousel } from '../Components/Carousel';
+
 
 
 export const Projects = () => {
@@ -20,11 +20,18 @@ export const Projects = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="min-h-screen">
-      {/* Container */}
-      <div className="mx-auto  p-3 max-w-6xl">
 
-        {/* Header Section */}
+
+
+
+
+
+        
+    <div className="relative min-h-screen">
+      {/* Container */}
+      <div className="max-w-7xl mx-auto ">
+        <div className="flex flex-col gap-y-15 ">
+        {/* Hero Section */}
         <section className='relative h-60 bg-fuchsia-400 flex flex-col justify-center items-center'>
           <img 
             src={bg} 
@@ -37,7 +44,7 @@ export const Projects = () => {
         </section>
 
         {/* Main Content */}
-        <div className="mt-4 flex flex-col md:flex-row gap-6">
+        <div className="mt-4 flex flex-col md:flex-row gap-6 p-6 max-w-3xl border-2 mx-auto">
 
           <main className="flex-1 p-6 rounded  text-white bg-slate-800">
             <h1 className="text-4xl font-bold mb-4">BENEFEED</h1>
@@ -122,6 +129,7 @@ export const Projects = () => {
             </div>
 
           </main>
+        </div>
         </div>
       </div>
     </div>
