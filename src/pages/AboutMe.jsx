@@ -6,7 +6,7 @@ import { ToolsLangSection } from '../sections/ToolsLangSection.jsx';
 import { useState } from 'react';
 
 
-// About me function, takes in active tab and setActivetab function
+// About me function
 export const AboutMe = () => {
   /* activeTab: which tab is currently open. setActiveTab: function to change active tab */
   const [activeTab, setActiveTab] = useState('basic'); 
@@ -18,18 +18,26 @@ export const AboutMe = () => {
         {/* Flex wrapper - all the sections act as column and vertically stacked. */}
         <div className="flex flex-col gap-y-25  ">
           {/*=== ABOUT ME SECTION === */}
-          {/* activeTab and setActiveTab is passed  to AboutMeSection */}
+          {/* activeTab and setActiveTab is passed to AboutMeSection */}
+           <section className= "p-0 m-0" id="aboutmesection"> 
           <AboutMeSection
             activeTab={activeTab}
             setActiveTab={setActiveTab}
           />
+          </section>
 
       {/* ==== TOOLS & SKILLS SECTION ==== */}
+      <section className= "p-0 m-0" id="toolslangsection"> 
 <ToolsLangSection/>
+</section>
       {/* ==== FEATURED PROJECTS ==== */}
+            <section className= "p-0 m-0" id="projectsection"> 
 <ProjectSection/>
+</section>
 {/* ==== CERTIFICATE GALLERY ==== */}
+<section className= "p-0 m-0" id="certificatesection"> 
 <CertificateSection/>
+</section>
    </div>
       </div>
     </main>
