@@ -5,9 +5,3 @@
   text-align: center;
 }
 
-
-@layer base {
-  .dark {
-    color-scheme: dark;
-  }
-}

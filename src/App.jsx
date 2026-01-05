@@ -29,8 +29,11 @@ useEffect(() => {
 
     <BrowserRouter>
 
-<div className='bg-linear-to-b from-indigo-300 to-pink-300 via-fuchsia-700 dark:bg-none dark:bg-black min-h-screen text-black dark:text-white transition-colors duration-500'>
-
+<div className={`min-h-screen transition-all duration-500 ${
+      isDarkMode 
+        ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white' 
+        : 'bg-linear-to-b from-indigo-300 via-fuchsia-700 to-pink-300 text-black'
+    }`}>
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
 <main>
           <Routes>
