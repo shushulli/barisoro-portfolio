@@ -1,5 +1,5 @@
 import sparkle from "../assets/images/sparkle.avif";
-import pfp from "../assets/images/pfp.png"
+import oc_fanart from "../assets/images/oc_fanart.png"
 import { Btn1 } from "../Components/Btn1";
 import { LearnAboutMeBtn } from "../Components/LearnAboutMeBtn.jsx";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +19,7 @@ export const LandingPage = () => {
         <img
           src={sparkle}
           alt="Sparkle background"
-          className="absolute w-full h-full object-cover mix-blend-overlay opacity-15"
+          className="absolute w-full h-full object-cover mix-blend-overlay opacity-15 animate-pulse"
         />
 
         {/* Container: max width, centered */}
@@ -29,9 +29,9 @@ export const LandingPage = () => {
             {/* Profile Image Section */}
             <section className="md:col-span-5 flex flex-col items-center justify-center p-6 ">
               <img
-                src={pfp}
+                src={oc_fanart}
                 alt="Profile Picture"
-                className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md"
+                className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md hover:animate-bounce active:animate-spin"
               />
               <Btn1/>
               <LearnAboutMeBtn action = {enterSite}/>

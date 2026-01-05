@@ -1,5 +1,5 @@
 
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 import { LandingPage } from './pages/LandingPage.jsx'
 import {Navbar} from './Components/Navbar.jsx'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
@@ -14,13 +14,22 @@ function App() {
   const [status, setStatus] = useState(false);  
   // Passed to LightDarkBtn
 const [isDarkMode, setMode] = useState(false); 
+// UseEffect
 
+useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
 
   return (
 
     <BrowserRouter>
-<div className='bg-linear-to-b from-indigo-300 to-pink-300 via-fuchsia-700'>
+
+<div className='bg-linear-to-b from-indigo-300 to-pink-300 via-fuchsia-700 dark:bg-none dark:bg-black min-h-screen text-black dark:text-white transition-colors duration-500'>
 
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
 <main>
@@ -37,6 +46,7 @@ const [isDarkMode, setMode] = useState(false);
       </Routes>
 </main>
 </div>
+
     </BrowserRouter>
     
   )

@@ -6,4 +6,8 @@
 }
 
 
-
+@layer base {
+  .dark {
+    color-scheme: dark;
+  }
+}
