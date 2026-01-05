@@ -12,9 +12,6 @@ function App() {
   /* status:  if mobile navbar is open or not. setStatus:function to change the status. default:closed */
   // passed to Navbar
   const [status, setStatus] = useState(false);  
-/* activeTab: which tab is currently open. setActiveTab: function to change active tab */
-// passed to AboutMe
-  const [activeTab, setActiveTab] = useState('basic'); 
   // Passed to LightDarkBtn
 const [isDarkMode, setMode] = useState(false); 
 
@@ -31,9 +28,9 @@ const [isDarkMode, setMode] = useState(false);
           <Routes>
             <Route path="/" element={<LandingPage/>} />
             
-        <Route path="/aboutme" element={<AboutMe activeTab={activeTab} setActiveTab={setActiveTab}/>} />
+        <Route path="/aboutme" element={<AboutMe/>} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<AboutMe activeTab={activeTab} setActiveTab={setActiveTab}/>} />
+        <Route path="/contact" element={<AboutMe/>} />
       </Routes>
 </main>
 </div>

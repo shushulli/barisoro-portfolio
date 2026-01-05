@@ -3,10 +3,13 @@ import { AboutMeSection } from '../sections/AboutMeSection.jsx';
 import { ProjectSection } from '../sections/ProjectSection';
 import { CertificateSection } from '../sections/CertificateSection.jsx';
 import { ToolsLangSection } from '../sections/ToolsLangSection.jsx';
+import { useState } from 'react';
 
 
 // About me function, takes in active tab and setActivetab function
-export const AboutMe = ({ activeTab, setActiveTab }) => {
+export const AboutMe = () => {
+  /* activeTab: which tab is currently open. setActiveTab: function to change active tab */
+  const [activeTab, setActiveTab] = useState('basic'); 
   return (
 // Main - entire about me page
     <main className="relative min-h-screen">
