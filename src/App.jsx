@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import { LightDarkBtn } from './Components/LightDarkBtn.jsx';
 import { AboutMe } from './pages/AboutMe.jsx';
 import { Projects} from './pages/Projects.jsx';
-
+import { MainLayout } from './Layouts/MainLayout.jsx';
 
 function App() {
   /* status:  if mobile navbar is open or not. setStatus:function to change the status. default:closed */
@@ -22,15 +22,18 @@ const [isDarkMode, setMode] = useState(false);
     <BrowserRouter>
 <div className='bg-linear-to-b from-indigo-300 to-pink-300 via-fuchsia-700'>
 
-    <Navbar navStatus={status} setStatus={setStatus} /> 
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
 <main>
           <Routes>
-            <Route path="/" element={<LandingPage/>} />
             
+            <Route path="/" element={<LandingPage/>} />
+            <Route
+          element={<MainLayout navStatus={status} setStatus={setStatus} />}
+        >
         <Route path="/aboutme" element={<AboutMe/>} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<AboutMe/>} />
+        </Route>
       </Routes>
 </main>
 </div>
