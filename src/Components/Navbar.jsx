@@ -2,10 +2,14 @@ import { Link } from "react-router-dom";
 
 export const Navbar = ({ navStatus, setStatus }) => {
   return (
-    <nav className="sticky top-0 bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50">
+    <nav className="sticky top-0 bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50 overflow-hidden rounded-xl mx-2">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          <div className="text-2xl font-bold font-sans">S h u l l i.exe</div>
+          <div className="text-2xl font-bold font-sans">
+            <p>Shulli.exe</p>
+            
+            
+            </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex gap-6">

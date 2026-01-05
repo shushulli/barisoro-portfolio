@@ -1,15 +1,27 @@
+import carousel1 from '../assets/images/ashley.png';
+import carousel2 from '../assets/images/foodbank.jpg';
+import carousel3 from '../assets/images/sparkle.avif';
+
+
 export const Carousel = () => {
+const [currentSlide, setCurrentSlide] = useState(0);
+const slides = [carousel1, carousel2, carousel3];
+
+  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
+  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+
     return ( 
 <> 
 
-
+     {/* Carousel */}
+     
 <div className="relative w-full h-56 md:h-96 mb-6 rounded-lg overflow-hidden">
               {slides.map((slide, index) => (
                 <img
                   key={index}
                   src={slide}
                   alt={`Slide ${index + 1}`}
-                  className={`absolute w-full h-full object-cover top-0 left-0 transition-opacity duration-500 ${
+                  className={`absolute w-full  h-full object-cover top-0 left-0 transition-opacity duration-500 ${
                     index === currentSlide ? "opacity-100" : "opacity-0"
                   }`}
                 />
@@ -47,7 +59,6 @@ export const Carousel = () => {
                 ))}
               </div>
             </div>
-
 
 
 </>

@@ -3,6 +3,7 @@ import carousel1 from '../assets/images/ashley.png';
 import carousel2 from '../assets/images/foodbank.jpg';
 import carousel3 from '../assets/images/sparkle.avif';
 import { useState } from 'react';
+import { Carousel } from '../Components/Carousel';
 
 
 export const Projects = () => {
@@ -19,7 +20,7 @@ export const Projects = () => {
   const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-pink-200 to-indigo-900 via-fuchsia-700">
+    <div className="min-h-screen">
       {/* Container */}
       <div className="mx-auto  p-3 max-w-6xl">
 
