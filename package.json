@@ -1,6 +1,5 @@
 {
   "name": "barisoro-portfolio",
-  "homepage": "https://github.com/shushulli/barisoro-portfolio.git",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@preline/accordion": "^3.2.3",
