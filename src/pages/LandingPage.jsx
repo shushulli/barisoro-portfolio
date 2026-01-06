@@ -1,6 +1,5 @@
 import sparkle from "../assets/images/sparkle.avif";
 import oc_fanart from "../assets/images/oc_fanart.png"
-import { Btn1 } from "../Components/Btn1";
 import { LearnAboutMeBtn } from "../Components/LearnAboutMeBtn.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -34,7 +33,7 @@ export const LandingPage = () => {
                 alt="Profile Picture"
                 className="size-40 md:size-60 rounded-full mb-6 shadow-md hover:animate-bounce "
               />
-              <Btn1/>
+
               <LearnAboutMeBtn action = {enterSite}/>
 
               
