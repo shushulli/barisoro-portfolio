@@ -1,8 +1,9 @@
-
+// LightDarkBtn component, receives mode and setMode from App.jsx
 export const LightDarkBtn = ({mode, setMode}) => {
+
   return (
     <>
-
+{/* When clicked, switches the current mode to opposite, changes icon accordingly */}
 <button onClick={()=>setMode(!mode)} 
 className = "fixed bottom-2 right-3 bg-pink-500 size-12 hover:bg-pink-700 transition-colors flex items-center justify-center cursor-pointer z-50 rounded-full shadow-lg shadow--400">  
 

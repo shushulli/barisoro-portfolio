@@ -1,11 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
 import pfp from '../assets/images/pfp.png'
-
+// Navbar component
 export const Navbar = ({ navStatus, setStatus }) => {
   const navigate = useNavigate();
 
   const enterSite = () => {
-    navigate("/"); // redirect to main page
+    navigate("/"); // refreshes the page when called
   };
   return (
     <nav className="sticky top-0 bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50 overflow-hidden rounded-xl mx-2">
@@ -33,12 +33,16 @@ export const Navbar = ({ navStatus, setStatus }) => {
             >
               Projects
             </Link>
-            <Link
-              to="/contact"
-              className="px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500"
-            >
-              Contact Me
-            </Link>
+            <button
+  onClick={() => {
+    const footer = document.getElementById("contact");
+    footer?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500"
+>
+  Contact Me
+</button>
+
           </div>
 
           {/* Mobile Button */}
@@ -51,7 +55,7 @@ export const Navbar = ({ navStatus, setStatus }) => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu  */}
       <div
         className={`${navStatus ? "block" : "hidden"} md:hidden bg-slate-800 px-4 pb-4 text-center`}
       >

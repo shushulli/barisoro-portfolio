@@ -1,15 +1,14 @@
 
-// About tabs function, takes activeTab and setActiveTab
+// About tabs component, takes activeTab and setActiveTab
 export const About_Tabs = ({activeTab, setActiveTab}) => {
 //Dictionary for storing my basic information 
     const basicInfo = {
-      // Age stores function for computing my age based on curr year and birthdate
-        age: (currentYear) => currentYear - 2005, 
+  
+        age: 20, 
         school: "Asia Pacific College",
         major: "Computer Science",
     };
-    // gets current year
- const currentYear = new Date().getFullYear(); 
+// Lists for my languages and experiences
 const languages = ['Designing websites using Figma', 'Front-end development using HTML,CSS,ReactJS, Tailwind, Bootstrap', 'Java and Python', 'Database management using MySQL and MySQL workbench']; 
 const experiences = ['Creating school projects that are aligned with Sustainable Development Goals such as food bank management system and flood risk forecasting system that is based on dam level and rainfall data']; 
 
@@ -39,7 +38,7 @@ const experiences = ['Creating school projects that are aligned with Sustainable
           {/* Content or basic tab */}
           {activeTab === 'basic' && (
             <div className="text-center text-gray-800">
-              <p>Age: {basicInfo.age(currentYear)}</p>
+              <p>Age: {basicInfo.age}</p>
               <p>School: {basicInfo.school}</p>
               <p>Major: {basicInfo.major}</p>
             </div>

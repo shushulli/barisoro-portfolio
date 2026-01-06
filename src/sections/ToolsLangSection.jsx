@@ -15,7 +15,7 @@ import mariaDB from '../assets/icons/mariaDB.png'
 
 // Tools and Languages section
 export const ToolsLangSection = () => {
-
+// Dictionary that stores the information for each tools
  const tools = [
   { id: 1, name: "HTML", icon: html },
   { id: 2, name: "CSS", icon: css },
@@ -34,27 +34,29 @@ export const ToolsLangSection = () => {
   return ( 
 <>
 <section>
+  {/* Container for padding and centering and limiting width */}
         <div className="max-w-6xl mx-auto shadow-2xl shadow-pink-100">
-            {/* Grid with 12 cols, gap of 6 */}
+            {/* Grid with 12 cols in md above, gap of 6. stacks vertically in small devices*/}
           <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-6 ">
             
             {/* TOOLS & LANGUAGES CELL */}
+            {/* order is for reversing position */}
             <div className="md:col-span-7 bg-fuchsia-100 p-6 rounded-lg shadow-md min-h-65 md:min-h-65 lg:min-h-65 order-2 md:order-1">
               <h1 className="text-lg font-bold mb-4">
              
               </h1>
-
+{/* create a figure for each tool */}
               <div className="rounded  p-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
                 {tools.map(tool => (
                   <figure key={tool.id} className="flex flex-col items-center">
                     <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
-                    <figcaption className="text-xs font-semibold mt-2">{tool.name}</figcaption>
+                    <figcaption className="text-xs text-black font-semibold mt-2">{tool.name}</figcaption>
                   </figure>
                 ))}
               </div>
             </div>
 
-            {/* LABEL */}
+            {/* LABEL CELL */}
             <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2  sm:flex-col">
               <h1 className="text-6xl font-semibold -tracking-widest text-white">
                 TOOLS AND LANGUAGES

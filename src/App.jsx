@@ -7,6 +7,7 @@ import { LightDarkBtn } from './Components/LightDarkBtn.jsx';
 import { AboutMe } from './pages/AboutMe.jsx';
 import { Projects} from './pages/Projects.jsx';
 import { MainLayout } from './Layouts/MainLayout.jsx';
+import { Footer } from './Components/Footer.jsx';
 
 function App() {
   /* status:  if mobile navbar is open or not. setStatus:function to change the status. default:closed */
@@ -32,24 +33,24 @@ useEffect(() => {
 <div className={`min-h-screen transition-all duration-500 ${
       isDarkMode 
         ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white' 
-        : 'bg-linear-to-b from-indigo-300 via-fuchsia-700 to-pink-300 text-black'
+        : 'bg-linear-to-b from-indigo-300 via-fuchsia-700 to-pink-300 text-white'
     }`}>
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
 <main>
           <Routes>
-            
+            {/* Page with no navbar */}
             <Route path="/" element={<LandingPage/>} />
+            {/* Pages with navbar */}
             <Route
           element={<MainLayout navStatus={status} setStatus={setStatus} />}
         >
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<AboutMe/>} />
         </Route>
       </Routes>
 </main>
 </div>
-
+<Footer/>
     </BrowserRouter>
     
   )

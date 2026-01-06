@@ -1,4 +1,3 @@
-import idpic from '../assets/images/ashley.png';
 import { AboutMeSection } from '../sections/AboutMeSection.jsx';
 import { ProjectSection } from '../sections/ProjectSection';
 import { CertificateSection } from '../sections/CertificateSection.jsx';
@@ -6,9 +5,10 @@ import { ToolsLangSection } from '../sections/ToolsLangSection.jsx';
 import { useState } from 'react';
 
 
-// About me function
+// About me page
 export const AboutMe = () => {
   /* activeTab: which tab is currently open. setActiveTab: function to change active tab */
+  // default activeTab is basicInfo tab
   const [activeTab, setActiveTab] = useState('basic'); 
   return (
 // Main - entire about me page
@@ -31,9 +31,10 @@ export const AboutMe = () => {
 <ToolsLangSection/>
 </section>
       {/* ==== FEATURED PROJECTS ==== */}
-            <section className= "p-0 m-0" id="projectsection"> 
+ <section className= "p-0 m-0" id="projectsection"> 
 <ProjectSection/>
 </section>
+
 {/* ==== CERTIFICATE GALLERY ==== */}
 <section className= "p-0 m-0" id="certificatesection"> 
 <CertificateSection/>

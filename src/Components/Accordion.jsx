@@ -1,12 +1,14 @@
 import { useState } from 'react';
-
+// Accordion component, takes project data that was passed in Projects page
 export const Accordion = ({ data }) => {
+  /* activeAccordion: which accor is currently open. setActiveAccordion: function to change active accordion*/
   const [activeAccordion, setActiveAccordion] = useState("rationale");
-
+// Toggle the clicked accordion: open it if it was closed, or close it if it was open. Only one accordion can be active at time.
   const toggleAccordion = (id) => {
     setActiveAccordion(prev => (prev === id ? "" : id));
   };
-
+  // dictionary for storing accordion title and content
+// the title and content are retrieved from data object/dictionary
   const items = [
     { id: "rationale", title: "Rationale", content: data.rationale },
     { id: "how", title: "How It Works", content: data.howItWorks }
@@ -14,13 +16,7 @@ export const Accordion = ({ data }) => {
 
   return (
     <div className="space-y-2 mt-6">
-      
-      {/* Status */}
-      <div className="inline-block mb-2 px-3 py-1 rounded-full text-xs font-semibold
-        bg-green-100 text-green-800 border border-green-300">
-        Status: {data.status}
-      </div>
-
+      {/* create accordion for rationale and howitworks */}
       {items.map(item => (
         <div
           key={item.id}

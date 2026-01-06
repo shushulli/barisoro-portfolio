@@ -1,4 +1,5 @@
 
+// Certificate card component, receives cert and index from certificate section
 
       export const CertificateCard = ({cert, index}) => { 
         return(
