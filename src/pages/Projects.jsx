@@ -23,8 +23,8 @@ const projectDetails = {
   },
 
   funes: {
-    id: "funes",
-    title: "Flood Risk Prediction Mini App (FUNES)",
+    id: "funesfbf",
+    title: "Flood Risk Prediction Mini App (FUNES and FBF)",
     description:
       "A mini, Python-based flood risk prediction application inspired by the Red Cross Red Crescent Climate Centre’s FUNES and Forecast-based Financing systems. It serves as a decision-support tool for local disaster risk reduction agencies in the Philippines.",
     rationale:

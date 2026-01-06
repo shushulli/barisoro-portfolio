@@ -1,29 +1,36 @@
 // Tools and Languages section
-import advanced_algo from '../assets/certs/advanced_algo.png'
-import foundation_algo from '../assets/certs/foundation_algo.png'
-import comsci_principles from '../assets/certs/comsci_principles.png'
-import databases from '../assets/certs/databases.png'
-import datastructure from '../assets/certs/datastructures.png'
-import dynamicprog from '../assets/certs/dynamicprog.png'
-import linkedlist from '../assets/certs/linkedlist.png'
-import recursion from '../assets/certs/recursion.png'
-import trees from '../assets/certs/trees.png'
+import html from '../assets/icons/html.png'
+import css from '../assets/icons/css.png'
+import reactjs from '../assets/icons/react.png'
+import tailwind from '../assets/icons/tailwind.png'
+import java from '../assets/icons/java.png'
+import python from '../assets/icons/python.png'
+import figma from '../assets/icons/figma.png'
+import nmap from '../assets/icons/nmap.png'
+import visualbasic from '../assets/icons/visualbasic.png'
+import vscode from '../assets/icons/vscode.png'
+import github from '../assets/icons/github.png'
+import mySQL from '../assets/icons/mySQL.png'
+import mariaDB from '../assets/icons/mariaDB.png'
 
 // Tools and Languages section
 export const ToolsLangSection = () => {
 
-  const tools = [
-    { name: "Advanced Algo", icon: advanced_algo },
-    { name: "Foundation Algo", icon: foundation_algo },
-    { name: "ComSci Principles", icon: comsci_principles },
-    { name: "Databases", icon: databases },
-    { name: "Data Structures", icon: datastructure },
-    { name: "Dynamic Prog", icon: dynamicprog },
-    { name: "Linked List", icon: linkedlist },
-    { name: "Recursion", icon: recursion },
-    { name: "Trees", icon: trees }
-  ];
-
+ const tools = [
+  { id: 1, name: "HTML", icon: html },
+  { id: 2, name: "CSS", icon: css },
+  { id: 3, name: "ReactJS", icon: reactjs },
+  { id: 4, name: "Tailwind", icon: tailwind },
+  { id: 5, name: "Python", icon: python },
+  { id: 6, name: "Java", icon: java },
+  { id: 7, name: "Visual Basic", icon: visualbasic },
+  { id: 8, name: "Nmap", icon: nmap },
+  { id: 9, name: "Visual Studio Code", icon: vscode },
+  { id: 10, name: "Figma", icon: figma },
+  { id: 11, name: "Github", icon: github },
+  { id: 12, name: "MariaDB", icon: mariaDB },
+  { id: 13, name: "MySQL Workbench", icon: mySQL },
+];
   return ( 
 <>
 <section>
@@ -34,12 +41,12 @@ export const ToolsLangSection = () => {
             {/* TOOLS & LANGUAGES CELL */}
             <div className="md:col-span-7 bg-fuchsia-100 p-6 rounded-lg shadow-md min-h-65 md:min-h-65 lg:min-h-65 order-2 md:order-1">
               <h1 className="text-lg font-bold mb-4">
-              sdsd
+             
               </h1>
 
-              <div className="rounded bg-amber-600 p-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+              <div className="rounded  p-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
                 {tools.map(tool => (
-                  <figure key={tool.name} className="flex flex-col items-center">
+                  <figure key={tool.id} className="flex flex-col items-center">
                     <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
                     <figcaption className="text-xs font-semibold mt-2">{tool.name}</figcaption>
                   </figure>
