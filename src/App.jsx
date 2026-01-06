@@ -20,8 +20,10 @@ const [isDarkMode, setMode] = useState(false);
 useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
+      console.log("The site is in dark mode")
     } else {
       document.documentElement.classList.remove('dark');
+      console.log("The site is in light mode")
     }
   }, [isDarkMode]);
 
