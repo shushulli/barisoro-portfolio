@@ -57,12 +57,12 @@ export const Navbar = ({ navStatus, setStatus }) => {
 
       {/* Mobile Menu  */}
       <div
-        className={`${navStatus ? "block" : "hidden"} md:hidden bg-slate-800 px-4 pb-4 text-center`}
+        className={`${navStatus ? "block" : "hidden"} md:hidden bg-slate-800 px-4  flex flex-col gap-2 text-center  *:hover:bg-fuchsia-950`}
       >
-        <Link to="/aboutme" className="block py-2 hover:bg-fuchsia-950">
+        <Link to="/aboutme" className="block py-2">
           About Me
         </Link>
-        <Link to="/projects" className="block py-2 hover:bg-fuchsia-950">
+        <Link to="/projects" className="block py-2">
           Projects
         </Link>
 <button

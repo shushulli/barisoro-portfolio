@@ -15,7 +15,7 @@ export const LandingPage = ({mode}) => {
     <>
 
       {/* Entire Landing Page, flex col for centering it vertically */}
-      <main className={`relative min-h-screen flex flex-col justify-center ${mode ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white': 'bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white'}`}>
+      <main className={`relative min-h-screen flex flex-col justify-center transition-all duration-500 ${mode ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white': 'bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white'}`}>
         {/* Sparkle bg image that pulses to make it look like it's sparkling*/}
         <img
           src={sparkle}
