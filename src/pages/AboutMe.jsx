@@ -16,7 +16,7 @@ export const AboutMe = () => {
       {/* Container - for padding and width */}
       <div className="p-5 max-w-7xl mx-auto">
         {/* Flex wrapper - all the sections act as column and vertically stacked. */}
-        <div className="flex flex-col gap-y-25  ">
+        <div className="flex flex-col gap-y-30  ">
           {/*=== ABOUT ME SECTION === */}
           {/* activeTab and setActiveTab is passed to AboutMeSection */}
            <section className= "p-0 m-0" id="aboutmesection"> 

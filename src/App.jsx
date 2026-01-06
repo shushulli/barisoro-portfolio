@@ -42,7 +42,7 @@ useEffect(() => {
             <Route
           element={<MainLayout navStatus={status} setStatus={setStatus} />}
         >
-        <Route path="/aboutme" element={<AboutMe/>} />
+        <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<AboutMe/>} />
         </Route>

@@ -10,8 +10,8 @@ export const About_Tabs = ({activeTab, setActiveTab}) => {
     };
     // gets current year
  const currentYear = new Date().getFullYear(); 
-
-
+const languages = ['Designing websites using Figma', 'Front-end development using HTML,CSS,ReactJS, Tailwind, Bootstrap', 'Java and Python', 'Database management using MySQL and MySQL workbench']; 
+const experiences = ['Creating school projects that are aligned with Sustainable Development Goals such as food bank management system and flood risk forecasting system that is based on dam level and rainfall data']; 
 
   return (
 <>
@@ -46,23 +46,26 @@ export const About_Tabs = ({activeTab, setActiveTab}) => {
           )}
           {/* Content for skills tab */}
           {activeTab === 'skills' && (
-            <div className="flex justify-center gap-4 flex-wrap">
-              {['JavaScript', 'Python', 'C++', 'HTML', 'CSS'].map((lang) => (
-                <span
-                  key={lang}
-                  className={"px-3 py-1 rounded-md cursor-pointer"}
-                >
-                  {lang}
-                </span>
-              ))}
+            <div className="flex justify-center flex-wrap">
+                  <ul className="list-disc list-inside text-gray-800 space-y-2 text-left">
+      {languages.map((lang, index) => (
+        <li key={index}>
+          {lang}
+        </li>
+      ))}
+    </ul>
             </div>
           )}
           {/* Content for experience tab*/}
           {activeTab === 'experience' && (
-            <div className="text-center text-gray-800">
-                <p> 
-                Created school projects that are aligned with Sustainable Development Goals (SDGs).
-                </p>
+            <div className="flex justify-center flex-wrap">
+                <ul className="list-disc list-inside text-gray-800 space-y-2 text-left">
+      {experiences.map((lang, index) => (
+        <li key={index}>
+          {lang}
+        </li>
+      ))}
+    </ul>
             </div>
           )}
         </div>

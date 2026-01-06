@@ -7,6 +7,8 @@ import dynamicprog from '../assets/certs/dynamicprog.png'
 import linkedlist from '../assets/certs/linkedlist.png'
 import recursion from '../assets/certs/recursion.png'
 import trees from '../assets/certs/trees.png'
+import tailwind from '../assets/certs/tailwind.png'
+import { CertificateCard } from '../Components/CerificateCard'
 
 // Certificate secton
 export const CertificateSection = () => {
@@ -20,6 +22,8 @@ export const CertificateSection = () => {
   { src: linkedlist, alt: "Certificate 7", caption: "Python Data Structures: Linked Lists",link:"https://www.linkedin.com/learning/certificates/fb4141509c888be21a4735325e6176bd4da58d77d2e60a4f3bcd07c53f245acc?trk=share_certificate" },
   { src: recursion, alt: "Certificate 8", caption: "Python: Recursion", link: "https://www.linkedin.com/learning/certificates/1778661c98738396533cb936a5de79a16515b99f1b12c98590769f2292ffa603?trk=share_certificate "},
   { src: trees, alt: "Certificate 9", caption: "Python Data Structures:Trees", link: "https://www.linkedin.com/learning/certificates/59c6eea4b45469a36ca4d844c14842ac4099a6613c03a90e19ff3ecf60e84d38?trk=share_certificate "},
+  { src: trees, alt: "Certificate 10", caption: "Tailwind CSS 4 Essential Training", link: "https://www.linkedin.com/learning/certificates/ee37200c32b68e29447515574c5a2f9bfab16a3d98b4b3362649fca78a7979b3?trk=share_certificate"}
+
 ];
     return ( 
 <> 
@@ -42,19 +46,8 @@ export const CertificateSection = () => {
   {/* Grid */}
   <div className="grid grid-cols-2 md:grid-cols-5  gap-6">
     {certificates.map((cert, index) => (
-      <figure
-        key={index}
-        className="overflow-hidden rounded-lg bg-gray-50 hover:shadow-2xl transform hover:scale-110 active:bg-pink-300 transition-all duration-300" onClick={() => window.open(cert.link, "_blank")}
-      >
-        <img
-          src={cert.src}
-          alt={cert.alt}
-          className="w-full h-auto object-cover"
-        />
-        <figcaption className="text-center mt-3 text-sm md:text-base text-gray-800 font-medium px-2">
-          {cert.caption}
-        </figcaption>
-      </figure>
+<CertificateCard cert = {cert} index={index}/>
+      
     ))}
   </div>
 </section>

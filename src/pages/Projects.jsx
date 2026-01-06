@@ -1,32 +1,25 @@
 import bg from '../assets/images/projectsbg.jpg';
-import carousel1 from '../assets/images/ashley.png';
+import carousel1 from '../assets/images/foodbank.jpg';
 import carousel2 from '../assets/images/foodbank.jpg';
-import carousel3 from '../assets/images/sparkle.avif';
+import carousel3 from '../assets/images/foodbank.jpg';
 import { useState } from 'react';
+import { Carousel } from '../Components/Carousel';
+import { Accordion } from '../Components/Accordion';
+
 
 
 
 export const Projects = () => {
   const [activeAccordion, setActiveAccordion] = useState("one");
-  const [currentSlide, setCurrentSlide] = useState(0);
+
 
   const toggleAccordion = (id) => {
     setActiveAccordion(prev => (prev === id ? "" : id));
   };
 
-  const slides = [carousel1, carousel2, carousel3];
-
-  const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-
+ 
   return (
 
-
-
-
-
-
-        
     <main className="relative min-h-screen">
       {/* Container */}
       <div className="max-w-7xl mx-auto ">
@@ -58,75 +51,13 @@ export const Projects = () => {
             </p>
 
             {/* Carousel */}
-     
-<div className="relative w-full h-56 md:h-96 mb-6 rounded-lg overflow-hidden">
-              {slides.map((slide, index) => (
-                <img
-                  key={index}
-                  src={slide}
-                  alt={`Slide ${index + 1}`}
-                  className={`absolute w-full  h-full object-cover top-0 left-0 transition-opacity duration-500 ${
-                    index === currentSlide ? "opacity-100" : "opacity-0"
-                  }`}
-                />
-              ))}
 
-              {/* Controls */}
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-2 -translate-y-1/2 p-2 rounded bg-pink-500 hover:bg-amber-300/20 active:ring-2 ring-purple-600 transition-colors duration-75 ease-in"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" fill="jsd" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18" />
-</svg>
-
-
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-2 -translate-y-1/2  p-2 rounded  bg-pink-500 hover:bg-amber-300/20 active:ring-2 ring-purple-600 transition-colors duration-75 ease-in"
-              >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3" />
-</svg>
-
-              </button>
-
-              {/* Dots */}
-              <div className="absolute bottom-2 w-full flex justify-center gap-2">
-                {slides.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={`w-3 h-3 rounded-full ${idx === currentSlide ? "bg-white" : "bg-white/50"}`}
-                    onClick={() => setCurrentSlide(idx)}
-                  />
-                ))}
-              </div>
-            </div>
-
-
+<Carousel/>
 
 
             {/* Accordion */}
-            <div className="space-y-2">
-              {["one", "two", "three"].map((id, idx) => (
-                <div key={id} className="border border-gray-400 rounded-lg overflow-hidden bg-amber-50">
-                  <button
-                    className={`w-full text-left py-3 px-4 font-semibold flex justify-between items-center text-gray-800 hover:text-gray-500
-                      ${activeAccordion === id ? "text-blue-600" : ""}`}
-                    onClick={() => toggleAccordion(id)}
-                  >
-                    Accordion #{idx + 1}
-                    <span>{activeAccordion === id ? "-" : "+"}</span>
-                  </button>
-                  {activeAccordion === id && (
-                    <div className="p-4 text-gray-800">
-                      <em>This is the {["first","second","third"][idx]} accordion body.</em> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions.
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
+            <Accordion/>
+            
 
           </section>
         </div>
