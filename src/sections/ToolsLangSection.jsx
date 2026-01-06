@@ -58,7 +58,7 @@ export const ToolsLangSection = () => {
 
             {/* LABEL CELL */}
             <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2  sm:flex-col">
-              <h1 className="text-6xl font-semibold -tracking-widest text-white">
+              <h1 className="text-6xl font-semibold  text-white">
                 TOOLS AND LANGUAGES
               </h1>
             </div>
