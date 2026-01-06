@@ -7,7 +7,7 @@ import { LightDarkBtn } from './Components/LightDarkBtn.jsx';
 import { AboutMe } from './pages/AboutMe.jsx';
 import { Projects} from './pages/Projects.jsx';
 import { MainLayout } from './Layouts/MainLayout.jsx';
-import { Footer } from './Components/Footer.jsx';
+
 
 function App() {
   /* status:  if mobile navbar is open or not. setStatus:function to change the status. default:closed */
@@ -50,7 +50,7 @@ useEffect(() => {
       </Routes>
 </main>
 </div>
-<Footer/>
+
     </BrowserRouter>
     
   )
