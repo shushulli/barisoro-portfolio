@@ -4,7 +4,7 @@ import { LearnAboutMeBtn } from "../Components/LearnAboutMeBtn.jsx";
 import { useNavigate } from "react-router-dom";
 
 // Landing page
-export const LandingPage = () => {
+export const LandingPage = ({mode}) => {
   // useNavigate function for learn about me button
    const navigate = useNavigate();
   // function for directing to about me page using the useNavigate that was defined above
@@ -13,8 +13,9 @@ export const LandingPage = () => {
   };
   return (
     <>
+
       {/* Entire Landing Page, flex col for centering it vertically */}
-      <main className="relative min-h-screen bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white flex flex-col justify-center">
+      <main className={`relative min-h-screen flex flex-col justify-center ${mode ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white': 'bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white'}`}>
         {/* Sparkle bg image that pulses to make it look like it's sparkling*/}
         <img
           src={sparkle}

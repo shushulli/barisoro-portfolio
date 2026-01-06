@@ -30,19 +30,15 @@ useEffect(() => {
 
     <BrowserRouter>
 
-<div className={`min-h-screen transition-all duration-500 ${
-      isDarkMode 
-        ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white' 
-        : 'bg-linear-to-b from-indigo-300 via-fuchsia-700 to-pink-300 text-white'
-    }`}>
+
     <LightDarkBtn mode={isDarkMode} setMode={setMode} />
 <main>
           <Routes>
             {/* Page with no navbar */}
-            <Route path="/" element={<LandingPage/>} />
+            <Route path="/" element={<LandingPage mode={isDarkMode}/>} />
             {/* Pages with navbar */}
             <Route
-          element={<MainLayout navStatus={status} setStatus={setStatus} />}
+          element={<MainLayout navStatus={status} setStatus={setStatus} mode={isDarkMode}/>}
         >
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
@@ -50,7 +46,7 @@ useEffect(() => {
         </Route>
       </Routes>
 </main>
-</div>
+
 
     </BrowserRouter>
     
