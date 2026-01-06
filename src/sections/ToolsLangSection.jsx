@@ -1,12 +1,33 @@
 // Tools and Languages section
+import advanced_algo from '../assets/certs/advanced_algo.png'
+import foundation_algo from '../assets/certs/foundation_algo.png'
+import comsci_principles from '../assets/certs/comsci_principles.png'
+import databases from '../assets/certs/databases.png'
+import datastructure from '../assets/certs/datastructures.png'
+import dynamicprog from '../assets/certs/dynamicprog.png'
+import linkedlist from '../assets/certs/linkedlist.png'
+import recursion from '../assets/certs/recursion.png'
+import trees from '../assets/certs/trees.png'
+
+// Tools and Languages section
 export const ToolsLangSection = () => {
 
-    return ( 
-<> 
+  const tools = [
+    { name: "Advanced Algo", icon: advanced_algo },
+    { name: "Foundation Algo", icon: foundation_algo },
+    { name: "ComSci Principles", icon: comsci_principles },
+    { name: "Databases", icon: databases },
+    { name: "Data Structures", icon: datastructure },
+    { name: "Dynamic Prog", icon: dynamicprog },
+    { name: "Linked List", icon: linkedlist },
+    { name: "Recursion", icon: recursion },
+    { name: "Trees", icon: trees }
+  ];
 
-
+  return ( 
+<>
 <section>
-        <div className="max-6xl mx-auto shadow-2xl shadow-pink-100">
+        <div className="max-w-6xl mx-auto shadow-2xl shadow-pink-100">
             {/* Grid with 12 cols, gap of 6 */}
           <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-6 ">
             
@@ -16,16 +37,13 @@ export const ToolsLangSection = () => {
               sdsd
               </h1>
 
-              <div className="rounded bg-amber-600 p-4 flex gap-4 flex-wrap">
-                <span className="bg-amber-300 px-3 py-1 rounded text-sm font-semibold">
-                  HTML
-                </span>
-                <span className="bg-amber-300 px-3 py-1 rounded text-sm font-semibold">
-                  CSS
-                </span>
-                <span className="bg-amber-300 px-3 py-1 rounded text-sm font-semibold">
-                  JavaScript
-                </span>
+              <div className="rounded bg-amber-600 p-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
+                {tools.map(tool => (
+                  <figure key={tool.name} className="flex flex-col items-center">
+                    <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
+                    <figcaption className="text-xs font-semibold mt-2">{tool.name}</figcaption>
+                  </figure>
+                ))}
               </div>
             </div>
 
@@ -39,9 +57,6 @@ export const ToolsLangSection = () => {
           </div>
         </div>
       </section>
-
-
-
 </>
     ); 
-} 
+}

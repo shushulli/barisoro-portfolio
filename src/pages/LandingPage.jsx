@@ -19,7 +19,7 @@ export const LandingPage = () => {
         <img
           src={sparkle}
           alt="Sparkle background"
-          className="absolute w-full h-full object-cover mix-blend-overlay opacity-15 animate-pulse"
+          className="absolute w-full h-full object-cover mix-blend-overlay opacity-20 animate-pulse"
         />
 
         {/* Container: max width, centered */}
@@ -31,7 +31,7 @@ export const LandingPage = () => {
               <img
                 src={oc_fanart}
                 alt="Profile Picture"
-                className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md hover:animate-bounce active:animate-spin"
+                className="size-40 md:w-60 md:h-60 rounded-full mb-6 shadow-md hover:animate-bounce "
               />
               <Btn1/>
               <LearnAboutMeBtn action = {enterSite}/>
