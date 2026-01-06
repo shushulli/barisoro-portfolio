@@ -46,6 +46,7 @@ useEffect(() => {
         >
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
+        
         </Route>
       </Routes>
 </main>

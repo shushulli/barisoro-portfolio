@@ -65,9 +65,15 @@ export const Navbar = ({ navStatus, setStatus }) => {
         <Link to="/projects" className="block py-2 hover:bg-fuchsia-950">
           Projects
         </Link>
-        <Link to="/contact" className="block py-2 hover:bg-fuchsia-950">
-          Contact Me
-        </Link>
+<button
+  onClick={() => {
+    const footer = document.getElementById("contact");
+    footer?.scrollIntoView({ behavior: "smooth" });
+  }}
+  className="block w-full py-2 hover:bg-fuchsia-950"
+>
+  Contact Me
+</button>
       </div>
     </nav>
   );
