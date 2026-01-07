@@ -7,6 +7,9 @@ import { LightDarkBtn } from './Components/LightDarkBtn.jsx';
 import { AboutMe } from './pages/AboutMe.jsx';
 import { Projects} from './pages/Projects.jsx';
 import { MainLayout } from './Layouts/MainLayout.jsx';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // function for every time the paht changes, it will scroll to top 
 function ScrollToTop() {
   // Grab the key as well as the pathname
@@ -19,7 +22,10 @@ function ScrollToTop() {
   return null;
 }
 
+
+
 function App() {
+
   /* status:  if mobile navbar is open or not. setStatus:function to change the status. default:closed */
   // passed to Navbar
   const [status, setStatus] = useState(false);  
@@ -37,7 +43,10 @@ useEffect(() => {
     }
   }, [isDarkMode]);
 
-
+useEffect(() => {
+    AOS.init();
+    AOS.refresh();
+  }, []);
   return (
 
     <BrowserRouter>
@@ -54,7 +63,7 @@ useEffect(() => {
         >
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/contactme" element={null} />
+
         
         </Route>
       </Routes>

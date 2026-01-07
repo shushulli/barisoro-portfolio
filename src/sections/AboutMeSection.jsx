@@ -6,7 +6,7 @@ export const AboutMeSection = ({activeTab, setActiveTab}) => {
     return ( 
 <> 
 
-<section>  
+<section  data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">  
 {/* Article because it's an independent content that can stand on its own */}
 <article className="bg-white shadow-md shadow-pink-400 mx-auto flex flex-col justify-center items-center rounded-lg p-6 w-full max-w-5xl mt-30">
 {/*My picture  */}

@@ -15,6 +15,8 @@ export const LandingPage = ({mode}) => {
     <>
 
       {/* Entire Landing Page, flex col for centering it vertically */}
+
+
       <main className={`relative min-h-screen flex flex-col justify-center transition-all duration-500 ${mode ? 'bg-linear-to-b from-gray-900 via-purple-950 to-black text-white': 'bg-linear-to-b from-pink-500 to-indigo-600 via-fuchsia-700 text-white'}`}>
         {/* Sparkle bg image that pulses to make it look like it's sparkling*/}
         <img
@@ -28,7 +30,7 @@ export const LandingPage = ({mode}) => {
           {/* Grid*/}
           <div className="relative z-10 grid md:grid-cols-12 gap-8">
             {/* Profile Image Section */}
-            <section className="md:col-span-5 flex flex-col items-center justify-center p-6 ">
+            <section className="md:col-span-5 flex flex-col items-center justify-center p-6 " data-aos="fade-right">
               <img
                 src={oc_fanart}
                 alt="Profile Picture"
@@ -40,8 +42,10 @@ export const LandingPage = ({mode}) => {
               
             </section>
 
+
+
             {/* Brief Info Section */}
-            <section className="md:col-span-7 flex flex-col justify-center border-2 border-white p-6 rounded-lg backdrop-blur-2xl shadow-md shadow-pink-300">
+            <section className="md:col-span-7 flex flex-col justify-center border-2 border-white p-6 rounded-lg backdrop-blur-2xl shadow-md shadow-pink-300" data-aos="fade-left">
               <h1 className="text-4xl md:text-6xl font-bold mb-2">Ashley May Barisoro</h1>
               <p className="text-lg md:text-2xl font-normal leading-relaxed">
                 Web Developer

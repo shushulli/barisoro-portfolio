@@ -33,7 +33,7 @@ export const ToolsLangSection = () => {
 ];
   return ( 
 <>
-<section>
+<section data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
   {/* Container for padding and centering and limiting width */}
         <div className="max-w-6xl mx-auto shadow-2xl shadow-pink-100">
             {/* Grid with 12 cols in md above, gap of 6. stacks vertically in small devices*/}

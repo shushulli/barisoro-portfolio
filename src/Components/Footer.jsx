@@ -2,12 +2,12 @@ export const Footer = () => {
   return (
     <footer className="bg-fuchsia-950 shadow text-center h-auto flex flex-col justify-center items-center text-white p-6 space-y-6" id="contact"> 
 
-      <h1 className="text-md md:text-xl font-normal text-pink-100 text-center"> Piqued your interest? </h1>
- <h1 className="text-sm md:text-lg font-normal text-pink-100 text-center"> Feel free to reach out using the form below or any of the available links below! </h1>
+      <h1 className="text-md md:text-xl font-normal text-pink-100 text-center" data-aos="fade-up"> Piqued your interest? </h1>
+ <h1 className="text-sm md:text-lg font-normal text-pink-100 text-center" data-aos="fade-up"> Feel free to reach out using the form below or any of the available links below! </h1>
       <div className="grid grid-cols-12 w-full gap-6">
 
         {/* div for linkedin and outlook as text, might add icons */}
-        <div className="col-span-12 sm:col-span-5 flex flex-col justify-center items-start gap-6">
+        <div className="col-span-12 sm:col-span-5 flex flex-col justify-center items-start gap-6" data-aos="fade-right">
 {/* Linkedin */}
 <button
   onClick={() =>
@@ -31,8 +31,8 @@ export const Footer = () => {
  
         </div>
 
-        {/* div for form, email, subject, message, submit button */}
-        <div className="col-span-12 sm:col-span-7 flex flex-col gap-3">
+        {/* div for form, email, subject, message, submit button */ }
+        <div className="col-span-12 sm:col-span-7 flex flex-col gap-3"data-aos="fade-left">
           <input 
             type="email" 
             placeholder="Email" 

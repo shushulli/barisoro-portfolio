@@ -28,7 +28,7 @@ export const CertificateSection = () => {
 
     return ( 
 <> 
-<section>
+<section data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
   {/*Hero section + flex wrapper*/}
 <section className='relative h-40 flex flex-col justify-center items-center  shadow-lg shadow-pink-600'> 
 {/*Header*/}
