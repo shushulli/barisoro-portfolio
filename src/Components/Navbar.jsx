@@ -5,7 +5,7 @@ export const Navbar = ({ navStatus, setStatus }) => {
   const navigate = useNavigate();
 
   const enterSite = () => {
-    navigate("/"); // refreshes the page when called
+    navigate("/"); // goes to landing page when called
   };
   return (
     <nav className="sticky top-0 bg-slate-900 text-white p-2 border-fuchsia-500 border-b-2 z-50 overflow-hidden rounded-xl mx-2">
