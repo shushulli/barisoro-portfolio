@@ -19,7 +19,7 @@ export const AboutMe = () => {
         <div className="flex flex-col gap-y-30  ">
           {/*=== ABOUT ME SECTION === */}
           {/* activeTab and setActiveTab is passed to AboutMeSection */}
-           <section className= "p-0 m-0" id="aboutmesection" data-aos="fade-up" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600"> 
+           <section className= "p-0 m-0" id="aboutmesection" > 
           <AboutMeSection
             activeTab={activeTab}
             setActiveTab={setActiveTab}
