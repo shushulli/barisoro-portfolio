@@ -24,6 +24,7 @@ export const Navbar = ({ navStatus, setStatus }) => {
             <Link
               to="/aboutme"
               className="px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500"
+              
             >
               About Me
             </Link>
@@ -38,7 +39,7 @@ export const Navbar = ({ navStatus, setStatus }) => {
     const footer = document.getElementById("contact");
     footer?.scrollIntoView({ behavior: "smooth" });
   }}
-  className="px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500"
+  className="px-3 py-1 hover:shadow-md hover:shadow-fuchsia-800 transition-shadow hover:font-semibold hover:text-pink-500 border-2 border-amber-50 rounded-md"
 >
   Contact Me
 </button>
@@ -59,16 +60,17 @@ export const Navbar = ({ navStatus, setStatus }) => {
       <div
         className={`${navStatus ? "block" : "hidden"} md:hidden bg-slate-800 px-4  flex flex-col gap-2 text-center  *:hover:bg-fuchsia-950`}
       >
-        <Link to="/aboutme" className="block py-2">
+        <Link to="/aboutme" className="block py-2" onClick={()=>setStatus(false)} >
           About Me
         </Link>
-        <Link to="/projects" className="block py-2">
+        <Link to="/projects" className="block py-2" onClick={()=>setStatus(false)}>
           Projects
         </Link>
 <button
   onClick={() => {
     const footer = document.getElementById("contact");
     footer?.scrollIntoView({ behavior: "smooth" });
+    setStatus(false)
   }}
   className="block w-full py-2 hover:bg-fuchsia-950"
 >

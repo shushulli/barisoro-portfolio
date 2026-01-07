@@ -37,7 +37,7 @@ const experiences = ['Creating school projects that are aligned with Sustainable
         <div className="w-full">
           {/* Content or basic tab */}
           {activeTab === 'basic' && (
-            <div className="text-center text-gray-800">
+            <div className="text-center text-gray-800 sm:text-sm md:text-base px-3 ">
               <p>Age: {basicInfo.age}</p>
               <p>School: {basicInfo.school}</p>
               <p>Major: {basicInfo.major}</p>
@@ -45,7 +45,7 @@ const experiences = ['Creating school projects that are aligned with Sustainable
           )}
           {/* Content for skills tab */}
           {activeTab === 'skills' && (
-            <div className="flex justify-center flex-wrap">
+            <div className="flex justify-center  sm:text-sm md:text-base px-3 ">
                   <ul className="list-disc list-inside text-gray-800 space-y-2 text-left">
       {languages.map((lang, index) => (
         <li key={index}>
@@ -57,7 +57,7 @@ const experiences = ['Creating school projects that are aligned with Sustainable
           )}
           {/* Content for experience tab*/}
           {activeTab === 'experience' && (
-            <div className="flex justify-center flex-wrap">
+            <div className="flex justify-center sm:text-sm md:text-base px-3 ">
                 <ul className="list-disc list-inside text-gray-800 space-y-2 text-left">
       {experiences.map((lang, index) => (
         <li key={index}>
