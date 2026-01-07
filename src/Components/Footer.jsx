@@ -6,14 +6,27 @@ export const Footer = () => {
  <h1 className="text-sm md:text-lg font-normal text-pink-100 text-center"> Feel free to reach out using the form below or any of the available links below! </h1>
       <div className="grid grid-cols-12 w-full gap-6">
 
-        {/* div for social media links as text */}
+        {/* div for linkedin and outlook as text, might add icons */}
         <div className="col-span-12 sm:col-span-5 flex flex-col justify-center items-start gap-6">
-          <a href="www.linkedin.com/in/ashley-may-barisoro-02896a322" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 font-medium">
-            LinkedIn
-          </a>
-          <a href="mailto:abbarisoro@apc.edu.ph" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400 font-medium">
-            Outlook : abbarisoro@student.apc.edu.ph
-          </a>
+{/* Linkedin */}
+<button
+  onClick={() =>
+    window.open(
+      "https://www.linkedin.com/in/ashley-may-barisoro-02896a322",
+      "_blank"
+    )
+  }
+  className="text-white hover:text-pink-400 font-medium"
+>
+  LinkedIn
+</button>
+{/* outlook */}
+          <a
+  href="mailto:abbarisoro@student.apc.edu.ph"
+  className="text-white hover:text-pink-400 font-medium"
+>
+  Outlook : abbarisoro@student.apc.edu.ph
+</a>
  
  
         </div>
