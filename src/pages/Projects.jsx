@@ -64,6 +64,8 @@ const projectDetails = {
     status: "Complete",
     developers: "Ariana May Saromo, Gwyneth Cataylo, Ashley May Barisoro",
   }
+
+  
 };
 
 export const Projects = () => {
