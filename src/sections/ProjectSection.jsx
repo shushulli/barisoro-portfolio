@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import benefeed from '../assets/images/benefeed.png'
 import funesfbf from '../assets/images/funesfbf.png'
 
-// Dicitionary storing infos present on the card
+// Array storing infos present on the card
  const projectCardData = [
   { title: "BeneFeed", description: "Food Bank Management System", cover:benefeed },
   { title: "Funes/Fbf", description: "Flood Risk Level Forecasting System",  cover:funesfbf, },
