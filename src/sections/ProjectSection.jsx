@@ -16,7 +16,7 @@ export const ProjectSection = () => {
     return ( 
 <> 
 
-<section className="min-h-screen" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">  
+<section className="py-16" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">  
   {/* Container for centering and padding (if i need to) */}
 <div className='mx-auto'> 
 {/*Hero section + flex wrapper*/}

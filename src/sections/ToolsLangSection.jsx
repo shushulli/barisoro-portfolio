@@ -13,52 +13,76 @@ import github from '../assets/icons/github.png'
 import mySQL from '../assets/icons/mySQL.png'
 import mariaDB from '../assets/icons/mariaDB.png'
 
-// Tools and Languages section
 export const ToolsLangSection = () => {
-// Dictionary that stores the information for each tools
- const tools = [
-  { id: 1, name: "HTML", icon: html },
-  { id: 2, name: "CSS", icon: css },
-  { id: 3, name: "ReactJS", icon: reactjs },
-  { id: 4, name: "Tailwind", icon: tailwind },
-  { id: 5, name: "Python", icon: python },
-  { id: 6, name: "Java", icon: java },
-  { id: 7, name: "Visual Basic", icon: visualbasic },
-  { id: 8, name: "Nmap", icon: nmap },
-  { id: 9, name: "Visual Studio Code", icon: vscode },
-  { id: 10, name: "Figma", icon: figma },
-  { id: 11, name: "Github", icon: github },
-  { id: 12, name: "MariaDB", icon: mariaDB },
-  { id: 13, name: "MySQL Workbench", icon: mySQL },
-];
+  const tools = [
+    { id: 1, name: "HTML", icon: html },
+    { id: 2, name: "CSS", icon: css },
+    { id: 3, name: "ReactJS", icon: reactjs },
+    { id: 4, name: "Tailwind", icon: tailwind },
+    { id: 5, name: "Python", icon: python },
+    { id: 6, name: "Java", icon: java },
+    { id: 7, name: "Visual Basic", icon: visualbasic },
+    { id: 8, name: "Nmap", icon: nmap },
+    { id: 9, name: "Visual Studio Code", icon: vscode },
+    { id: 10, name: "Figma", icon: figma },
+    { id: 11, name: "Github", icon: github },
+    { id: 12, name: "MariaDB", icon: mariaDB },
+    { id: 13, name: "MySQL Workbench", icon: mySQL },
+  ];
+
   return ( 
-<>
-<section data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
-  {/* Container for padding and centering and limiting width */}
-        <div className="max-w-6xl mx-auto shadow-2xl shadow-pink-100">
-            {/* Grid with 12 cols in md above, gap of 6. stacks vertically in small devices*/}
-          <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-6 ">
+    <>
+      <style>{`
+        @keyframes float-bubble {
+          0% { transform: translateY(0px) translateX(0px); }
+          33% { transform: translateY(-10px) translateX(5px); }
+          66% { transform: translateY(5px) translateX(-5px); }
+          100% { transform: translateY(0px) translateX(0px); }
+        }
+        .bubble-float {
+          animation: float-bubble infinite ease-in-out;
+        }
+        .bubble-float:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+
+      <section data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600">
+        {/* Applied your original shadow-2xl shadow-pink-100 right here */}
+        <div className="max-w-6xl mx-auto shadow-2xl shadow-pink-100 rounded-3xl p-4 md:p-8 mt-10 border border-pink-200/20">
+          
+          <div className="grid sm:grid-cols-1 md:grid-cols-12 gap-12 items-center">
             
             {/* TOOLS & LANGUAGES CELL */}
-            {/* order is for reversing position */}
-            <div className="md:col-span-7 bg-fuchsia-100 p-6 rounded-lg shadow-md min-h-65 md:min-h-65 lg:min-h-65 order-2 md:order-1">
-              <h1 className="text-lg font-bold mb-4">
-             
-              </h1>
-{/* create a figure for each tool */}
-              <div className="rounded  p-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4">
-                {tools.map(tool => (
-                  <figure key={tool.id} className="flex flex-col items-center">
-                    <img src={tool.icon} alt={tool.name} className="w-10 h-10" />
-                    <figcaption className="text-xs text-black font-semibold mt-2">{tool.name}</figcaption>
+            <div className="md:col-span-7 flex flex-wrap justify-center gap-6 md:gap-8 order-2 md:order-1 min-h-[250px] p-4">
+              
+              {tools.map((tool, index) => {
+                const animDuration = 4 + (index % 4); 
+                const animDelay = index * 0.3; 
+
+                return (
+                  <figure 
+                    key={tool.id} 
+                    className="bubble-float group relative z-10 hover:z-50 flex flex-col items-center justify-center size-16 md:size-20 rounded-full bg-pink-300/30 backdrop-blur-md border border-pink-200/50 shadow-md hover:bg-pink-300/60 hover:scale-110 hover:shadow-lg transition-all duration-300 cursor-pointer"
+                    style={{
+                      animationDuration: `${animDuration}s`,
+                      animationDelay: `${animDelay}s`
+                    }}
+                  >
+                    <img src={tool.icon} alt={tool.name} className="w-8 h-8 md:w-10 md:h-10 object-contain group-hover:scale-110 transition-transform duration-300" />
+                    
+                    <figcaption className="absolute -bottom-8 opacity-0 group-hover:opacity-100 group-hover:-translate-y-1 transition-all duration-300 text-xs text-pink-600 bg-white/90 backdrop-blur-sm font-bold px-3 py-1 rounded-full shadow-md whitespace-nowrap pointer-events-none">
+                      {tool.name}
+                    </figcaption>
                   </figure>
-                ))}
-              </div>
+                );
+              })}
+
             </div>
 
             {/* LABEL CELL */}
-            <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2  sm:flex-col">
-              <h1 className="text-6xl font-semibold  text-white">
+            <div className="md:col-span-5 flex items-center justify-center order-1 md:order-2 sm:flex-col text-center">
+              <h1 className="text-5xl md:text-6xl font-semibold text-white drop-shadow-md leading-tight">
                 TOOLS AND LANGUAGES
               </h1>
             </div>
@@ -66,6 +90,6 @@ export const ToolsLangSection = () => {
           </div>
         </div>
       </section>
-</>
-    ); 
+    </>
+  ); 
 }
