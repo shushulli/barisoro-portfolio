@@ -3,3 +3,4 @@ This is a simple portfolio created by Ashley May Barisoro from CS241 in Asia Pac
 
 
 
+uh im gonna redo this cuz it's kinda ass.. maybe soon
